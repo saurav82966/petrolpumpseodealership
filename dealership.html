@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application</title>
+    <meta name="description" content="Application">
+    <meta name="keywords" content="Application">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;family=Stylish&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    #successMessage {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #dff0d8;
+        color: #3c763d;
+        border: 1px solid #d6e9c6;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #userForm {
+        margin-top: 20px;
+    }
+</style>
+
+<body id="divContent">
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" />
+                            <h4>Welcome to<span>Petrol Pump Application<br> </span></h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-3">
+                    <div class="panel">
+                        <input type="hidden" name="_token" value="LDJIBaP1bzziOHN0ZwjvCABctbZcoKUpxZ5ZdjLx">
+                        <div class="row">
+
+                            <h3>Applicant Registration Portal for Petrol Pump Dealership</h3>
+                            <form id="userForm">
+                                <div class="row">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="name"><i class="fa-solid fa-user"></i> Applicant Name <span
+                                            class="red-btn">*</span></label>
+                                    <input type="text" id="name" name="name" class="form-control"
+                                        autocomplete="given-name" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="number"><i class="fa-solid fa-phone"></i> Phone Number <span
+                                            class="red-btn">*</span></label>
+                                    <input type="number" id="number" name="number" class="form-control"
+                                        autocomplete="given-number" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="email"><i class=" fa-solid fa-envelope"></i> Email <span
+                                            class="red-btn">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-control" type="email"
+                                        autocomplete="on" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="location"><i class="fa-solid fa-location-dot"></i> Location <span
+                                            class="red-btn">*</span></label>
+                                    <input type="text" id="location" name="location" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="code">Pin code <span class="red-btn">*</span></label>
+                                    <input type="number" id="pincode" name="code" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="district">District <span class="red-btn">*</span></label>
+                                    <input type="text" id="district" name="district" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="state">State <span class=" red-btn">*</span></label>
+
+                                    <select name="state" class="form-control" id="state" required>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="company">Company <span class="red-btn">*</span></label>
+                                    <select name="company" class="form-control" id="company" required>
+                                        <option value="">Select</option>
+                                        <option value="Indian Oil Corporation Ltd">Indian Oil Corporation Ltd</option>
+                                        <option value="Hindustan Petroleum Corporation Ltd">Hindustan Petroleum
+                                            Corporation Ltd</option>
+                                        <option value="Bharat Petroleum Corporation Ltd">Bharat Petroleum Corporation
+                                            Ltd</option>
+                                        <option value="Adani cng petroleum corporation Limited">Adani cng petroleum
+                                            corporation Limited</option>
+                                        <option value="Jio-BP Petroleum corporation Limited">Jio-BP Petroleum
+                                            corporation Limited</option>
+                                        <option value="Nayara Petroleum Corporation Limited">Nayara Petroleum
+                                            Corporation Limited</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="investment">Investment <span class="red-btn">*</span></label>
+                                    <select name="investment" id="investment" class="form-control" required>
+                                        <option value="">Select</option>
+                                        <option value="25 - 50 Lakh">25 - 50 Lakh</option>
+                                        <option value="50 - 75 Lakh">50 - 75 Lakh</option>
+                                        <option value="75 - 1 Cr">75 - 1 Cr</option>
+                                        <option value="1 Cr Above">1 Cr Above</option>
+                                    </select>
+
+                                    <div class="col-sm-12">
+                                        <button type="submit" class="btn btn-primary mt-20">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <p id="successMessage" style="display:none;">Thank you, our agent will contact you soon!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <footer style="background:#f2f2f2;">
+        <div class="container" style="padding:0 15px;">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-md-4">
+                    <p class="ff">Copyright © petroleumgovin.in<br>All rights reserved</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p class="text-center ff"><b><a style="cursor:pointer;"
+                                onclick="return confirm('Check After Last Date of Application Process');">CHECK DRAW
+                                STATUS</a></b></p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p class="text-right ff">For any Complaints/Queries<br>Write us at:
+                        info@petroleumgovin.in
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDKs for Web -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script>
+        // Your Firebase configuration with correct database URL
+        var firebaseConfig = {
+           apiKey: "AIzaSyDiUXKlL2uFqZTJF80OycHwEU44OMjH5U4",
+  authDomain: "inquiry-form-796d0.firebaseapp.com",
+  databaseURL: "https://inquiry-form-796d0-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "inquiry-form-796d0",
+  storageBucket: "inquiry-form-796d0.firebasestorage.app",
+  messagingSenderId: "538374486014",
+  appId: "1:538374486014:web:0fd94f1b12a1c9e72f72af"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Reference to your Firebase Realtime Database
+        var database = firebase.database();
+
+        // Handle form submission
+        document.getElementById('userForm').addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var number = document.getElementById('number').value;
+            var location = document.getElementById('location').value;
+            var pincode = document.getElementById('pincode').value;
+            var district = document.getElementById('district').value;
+            var state = document.getElementById('state').value;
+            var company = document.getElementById('company').value;
+            var investment = document.getElementById('investment').value;
+
+
+            // Save form data to Firebase
+            saveUserData(name, email, number, location, pincode, district, state, company, investment);
+
+            // Reset the form
+            document.getElementById('userForm').reset();
+
+            // Show success message
+            document.getElementById('userForm').style.display = 'none';
+
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+        }
+
+        // Save data to Firebase function
+        function saveUserData(name, email, number, location, pincode, district, state, company, investment) {
+            var newUserRef = database.ref('usersdata585').push();
+            newUserRef.set({
+                name: name,
+                email: email,
+                number: number,
+                location: location,
+                pincode: pincode,
+                district: district,
+                state: state,
+                company: company,
+                investment: investment,
+                timestamp: Date.now()
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>
